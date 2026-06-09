@@ -3,30 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Strg//_CSS/Flyout.CSS">
-    
-    <title>S3ulSite</title>
+    <link rel="stylesheet" href="Strg/_CSS/Flyout.CSS">
+
+    <title>S3ulSite | ⯎</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
     <style>
+        @font-face {
+            font-family: "Determination Mono";
+            src:
+                url("Strg/fnts/determination-mono.woff2") format("woff2"),
+                url("Strg/fnts/determination-mono.otf") format("opentype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body {
-            overflow: visible; /* add this */
             margin: 0;
             height: 100vh;
             display: flex;
             /*  justify-content: center; */
             /*    align-items: center; */
             background: linear-gradient(135deg, #0c0c0c 0%, #0e0335 100%);
-            font-family: Determination Mono;
-            ;
+            font-family: "Determination Mono", monospace;
             /* Added a default font for better appearance */
         }
     </style>
 </head>
 
 <body>
+
+    <div class="Burbur-Wrap">
+        <button class="Burbur-Btn" onclick="this.parentElement
+                   .classList.toggle('open')">
+            ⯎
+        </button>
+        <div class="Burbur-Menu">
+
+            <a href="index.html">
+                <span class="icon">🏠</span>
+                <span class="text">Home</span>
+            </a>
+
+            <a href="about.html">
+                <span class="icon">⚙</span>
+                <span class="text">About</span>
+            </a>
+
+            <a href="contact.html">
+                <span class="icon">✉️</span>
+                <span class="text">Contact</span>
+            </a>
+        </div>
+    </div>
+
     <!-- Content can be added here if needed in the future -->
+
+    <p style="font-size: 24px; color: #d4b7ff;">Welcome to S3ulSite! This site is currently under construction.</p>
 </body>
 
 </html>

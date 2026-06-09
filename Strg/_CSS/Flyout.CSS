@@ -1,0 +1,127 @@
+.Burbur-Wrap {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row; /* important: prevents swapping */
+  height: 48px;
+  min-width: max-content;
+  flex-shrink: 0;
+
+  background: #1f1f2b;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+
+  overflow: hidden;
+    pointer-events: auto;
+  
+}
+
+/* =======================
+   BUTTON (LEFT SIDE)
+======================= */
+.Burbur-Btn {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px; /* 🔥 prevents flex reordering/reshaping */
+  border: none;
+  background: transparent;
+}
+
+
+/* =======================
+   BADGE
+======================= */
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  border-radius: 12px 0 0 12px;
+  border-right: none;
+
+
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* =======================
+   MENU (HIDDEN BY DEFAULT)
+======================= */
+.Burbur-Menu {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.3rem;
+
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: max-width 0.25s ease, opacity 0.2s ease;
+}
+
+.Burbur-Wrap.open .Burbur-Menu {
+  max-width: 999px; /* large enough to fit all menu items */
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+/* =======================
+   MENU ITEMS
+======================= */
+.Burbur-Menu a {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;   /* width comes from content */
+    overflow: hidden;
+    gap: 0.4rem;
+    padding: 0 0.5rem;
+}
+
+.Burbur-Menu a:hover {
+  background: #3b3b4f;
+}
+
+/* =======================
+   ICONS
+======================= */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Burbur-Menu .icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* =======================
+   HOVER TEXT EXPANSION
+======================= */
+.Burbur-Menu .text {
+    max-width: 0;
+    opacity: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    transition: max-width .2s ease, opacity .2s ease;
+}
+
+.Burbur-Menu a:hover .text {
+    max-width: 100px;
+    opacity: 1;
+}
